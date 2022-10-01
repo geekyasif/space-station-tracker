@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-import iss from './satellite.png'
+import iss from "./satellite.png"
 
 const Map = ({ center, zoom }) => {
 
@@ -11,7 +10,11 @@ const Map = ({ center, zoom }) => {
                 defaultCenter={ center }
                 defaultZoom={ zoom }
             >
-                {/* <img src={iss}/> */}
+                <img src={iss} alt="logo" style={{height: 50, width: 50}}
+                
+                lat={center.lat}
+                lng={center.lng}
+                />
             </GoogleMapReact>
         </div>
     )
